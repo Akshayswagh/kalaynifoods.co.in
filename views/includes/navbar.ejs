@@ -1,0 +1,76 @@
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+  integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<link rel="stylesheet" href="css/navbar.css" />
+<nav class="navbar">
+  <div class="navbar-logo">
+    <a href="/"><img src="images/logo.jpeg" alt="kalyani" /></a>
+  </div>
+  <div class="navbar-menu" id="navbarMenu">
+    <a href="/">Home</a>
+    <a href="/celebrations">Celebrations</a>
+    <a href="/OTHERP"> Other Products</a>
+    <a href="/aboutUs">About Us</a>
+    <a href="/gallery">Gallery</a>
+    <a href="/contactUs">Contact Us</a>
+    <a href="/cart"
+      ><i class="fa-solid fa-cart-shopping">
+        <span id="cartCount"> </span>
+      </i></a
+    >
+  </div>
+  <div class="navbar-toggle" id="navbarToggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+  <div class="close-icon" id="closeIcon">✖</div>
+  
+</nav>
+
+<div class="navbar-search-div serach_for_desktop">
+  <form class="navbar-search-form" action="/search" method="GET" id="searchForm" role="search">
+    <input
+      class="form-control navbar-search-input"
+      type="search"
+      placeholder="Search Products"
+      name="q"
+      required
+    />
+    <button class="navbar-search-btn" type="submit">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+  </form>
+</div>
+<hr />
+
+
+<div class="mobileSearch">
+  <div class="navbar-search-div serach_for_mobile">
+    <form class="navbar-search-form" action="/search" method="GET" id="searchForm" role="search">
+      <input
+        class="form-control navbar-search-input"
+        type="search"
+        placeholder="Search Products"
+        name="q"
+      />
+      <button class="navbar-search-btn" type="submit">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+    
+  </div>
+  <a href="/cart" class="mobileCart"
+  ><i class="fa-solid fa-cart-shopping  mobileCart">
+    <span id="cartCount"> </span>
+        </i></a
+        >
+        
+      </div>
+      
+      <script src="js/navbar.js"></script>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalyani Foods - Available At</title>
+    <style>
+      /* Reset and Base Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Arial", sans-serif;
+      }
+
+      body {
+        line-height: 1.6;
+        color: #333;
+        background: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      /* Main Content Styles */
+      .locations-container {
+        flex: 1;
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 20px;
+        width: 100%;
+      }
+
+      .page-title {
+        text-align: center;
+        color: #e74c3c;
+        margin: 2rem 0;
+        font-size: 2.5rem;
+      }
+
+      .locations-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        padding: 0 20px;
+      }
+
+      .location-card {
+        background: #fff;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .location-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .location-card h3 {
+        color: #2c3e50;
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+      }
+
+      .location-card p {
+        margin-bottom: 0.5rem;
+        color: #555;
+      }
+
+      .contact-info {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #eee;
+      }
+
+      .contact-info a {
+        color: #e74c3c;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .page-title {
+          font-size: 2rem;
+        }
+
+        .locations-grid {
+          grid-template-columns: 1fr;
+          padding: 0;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .mobile-menu {
+          display: block;
+        }
+
+        .location-card {
+          padding: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('includes/navbar') %>
+
+    <div class="locations-container">
+      <h1 class="page-title">Find Our Products</h1>
+
+      <div class="locations-grid">
+        <!-- Location Card Template -->
+
+        <div class="location-card">
+          <h3>Pankajkumar Amrutlal</h3>
+          <p>
+            Tilak path, Gulmandi road,<br />
+            Infront of Mahalaxmi saree centre,<br />
+            Chhatrapati Sambhaji Nagar.
+          </p>
+          <div class="contact-info">
+            Contact: <a href="tel:9225305224">9225305224</a>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <h3>Pankajkumar & Sons</h3>
+          <p>
+            Prime Nigma, Shop no 11/12,<br />
+            Chhatrapati Sambhaji Nagar.<br />
+            Sutgirni chowk, Garkheda,
+          </p>
+          <div class="contact-info">
+            Contact: <a href="tel:7945652445">7945652445</a>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <h3>Pankajkumar & Brothers</h3>
+          <p>
+            Ajaydeep complex,<br />
+            Shop no 14/15, N3 Cidco,<br />
+            Chhatrapati Sambhaji Nagar.
+          </p>
+          <div class="contact-info">
+            Contact: <a href="tel:9225305223">9225305223</a>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <h3>New Shah traders</h3>
+          <p>
+            Infront of Bharat Mata mandir,<br />
+            Chhatrapati Shivaji Maharaj putla road, <br />
+            Jalna.
+          </p>
+          <div class="contact-info">
+            Contact: <a href="tel:9923561015">9923561015</a>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <h3>Panna Rukhmini Food Junction.</h3>
+          <p>
+            Near Shree Guru Ganesh Bhavan,<br />
+            Infront of Jain Pavbhaji,<br />
+            Jalna.
+          </p>
+          <div class="contact-info">
+            Contact: <a href="tel:9822455521">9822455521</a>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <h3>Shree Krushna Foods</h3>
+          <p>
+            Preetisudha Nagar, Mantha road,<br />
+            Infront of Jinturkar hospital,<br />
+            Jalna
+          </p>
+          <div class="contact-info">
+            Contact: <a href="tel:9422187664">9422187664</a>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <h3>Cafe Madhushala</h3>
+          <p>
+            RM-30, Veer Savarkar colony,<br />
+            Maharana Pratap chowk,<br />
+            Bajaj Nagar, MIDC waluj,<br />
+            Chhatrapati Sambhaji Nagar.
+          </p>
+          <div class="contact-info">
+            Contact: <a href="tel:9604150277">9604150277</a>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <h3>Nandini Cakes</h3>
+          <p>
+            Ambad, Dist - Jalna.,<br />
+            Infront of Mahalaxmi saree centre,<br />
+            Chhatrapati Sambhaji Nagar.
+          </p>
+          <div class="contact-info">
+            Contact: <a href="tel:7020653553">7020653553</a>
+            <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="tel: 8421044927"> 8421044927</a>
+          </div>
+        </div>
+
+        <div class="location-card">
+          <h3>Riddhi Gruh Udhyog & Daily Needs</h3>
+          <p>
+            Shop no 1,2,3, Prateek Villa,<br />
+            Plot no 82, sector F-1,<br />
+            Infront of Saraswat Bank, <br />
+            Gruh sahni nagar, N4 Cidco, <br />
+            Chhatrapati Sambhaji Nagar
+          </p>
+          <div class="contact-info">
+            Contact: <a href="tel:8888554421">8888554421</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('includes/footer') %>
+  </body>
+</html>

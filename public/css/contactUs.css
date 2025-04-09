@@ -1,0 +1,75 @@
+/* Contaus css */
+/* Contact Page Custom Styles */
+.contact-header {
+  background-color: #141d38;
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+}
+.contact-header h1 {
+  font-size: 2.5rem;
+}
+.contact-header p {
+  font-size: 1.2rem;
+}
+.contact-section {
+  padding: 50px 0 0;
+}
+.form-control:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 5px rgba(220, 53, 69, 0.5);
+}
+.btn-submit {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+}
+.btn-submit:hover {
+  background-color: #b02a37;
+}
+.icons {
+  font-size: 1.5rem;
+  color: #dc3545;
+}
+
+.contact-info p {
+  color: #6c757d;
+}
+
+/* Map section styling */
+
+#map {
+  margin: 0 0 20px 7rem;
+  height: 90%;
+  width: 90%;
+  justify-content: start;
+  align-items: center;
+}
+.map-section {
+  margin-top: 40px;
+  display: flex;
+  margin: 40px 20px 0px 0;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 5%;
+  }
+
+  .contact-info-section {
+    margin-top: 50px !important;
+  }
+
+  #map {
+    height: 300px;
+    margin-left: 0;
+    padding: 0 5%;
+  }
+  .map-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 20px 0;
+  }
+}

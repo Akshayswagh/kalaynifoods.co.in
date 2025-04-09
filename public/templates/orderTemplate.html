@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+      .email-container {
+        max-width: 600px;
+        margin: auto;
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      h1 {
+        color: #0056b3;
+      }
+      .order-details {
+        margin-top: 20px;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      .order-details th,
+      .order-details td {
+        padding: 10px;
+        border: 1px solid #ddd;
+      }
+      .order-details th {
+        background-color: #f4f4f4;
+        text-align: left;
+      }
+      .footer {
+        margin-top: 20px;
+        font-size: 0.9em;
+        text-align: center;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-container">
+      <h1>New Order Received</h1>
+      <p><strong>Name:</strong> {{name}}</p>
+      <p><strong>Email:</strong> {{email}}</p>
+      <p>
+        <strong>Contact:</strong
+        ><a id="contact-link" href="tel:+91{{dial}}"> {{contact}} </a>
+      </p>
+      <p><strong>Address:</strong> {{address}}</p>
+
+      <h2>Order Details</h2>
+      <table class="order-details">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{cartItems}}
+        </tbody>
+      </table>
+      <p><strong>Total Price:</strong> ₹{{totalPrice}}</p>
+    </div>
+  </body>
+</html>

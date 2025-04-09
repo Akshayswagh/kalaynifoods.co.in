@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalyani Ice Cream Parlour</title>
+    <link rel="stylesheet" href="css/home.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Include the navbar -->
+    <%- include('includes/navbar') %>
+
+    <!-- Slider Section -->
+    <section class="slider">
+      <div
+        id="imageSlider"
+        class="carousel slide"
+        data-ride="carousel"
+        data-interval="3000"
+      >
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+          <li data-target="#imageSlider" data-slide-to="0" class="active"></li>
+          <li data-target="#imageSlider" data-slide="1"></li>
+          <li data-target="#imageSlider" data-slide="2"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="images/HomePage/slider1.jpg"
+              alt="Image 1"
+              class="d-block"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="images/HomePage/slider2.jpg"
+              alt="Image 2"
+              class="d-block"
+            />
+          </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#imageSlider" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#imageSlider" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </section>
+
+    <!--  products section -->
+
+    <div class="heading">
+      <h2>Water based ice lolly</h2>
+    </div>
+    <section class="products-container">
+      <% if (Water_based_Ice_lolly.length > 0) { %> <%
+      Water_based_Ice_lolly.forEach(product => { %>
+      <div class="product-card">
+        <img src="<%= product.imageUrl %>" alt="<%= product.name %>" />
+        <h2><%= product.name %></h2>
+        <p><%= product.description %></p>
+        <p>Price: &#8377; <%= (product.price).toLocaleString('en-IN') %></p>
+        <button
+          class="add-to-cart-btn"
+          data-id="<%= product.id %>"
+          data-name="<%= product.name %>"
+          data-price="<%= product.price %>"
+          data-image-url="<%= product.imageUrl %>"
+          onclick="addToCart(this)"
+        >
+          Add to Cart
+        </button>
+      </div>
+      <% }); %> <% } else { %>
+      <p>No products available.</p>
+      <% } %>
+    </section>
+
+    <div class="heading">
+      <h2>Milk Based ice lolly</h2>
+    </div>
+
+    <section class="products-container">
+      <% if (Milk_based_Ice_lolly.length > 0) { %> <%
+      Milk_based_Ice_lolly.forEach(product => { %>
+      <div class="product-card">
+        <img src="<%= product.imageUrl %>" alt="<%= product.name %>" />
+        <h2><%= product.name %></h2>
+        <p><%= product.description %></p>
+        <p>Price: &#8377; <%= (product.price).toLocaleString('en-IN') %></p>
+        <button
+          class="add-to-cart-btn"
+          data-id="<%= product.id %>"
+          data-name="<%= product.name %>"
+          data-price="<%= product.price %>"
+          data-image-url="<%= product.imageUrl %>"
+          onclick="addToCart(this)"
+        >
+          Add to Cart
+        </button>
+      </div>
+      <% }); %> <% } else { %>
+      <p>No products available.</p>
+      <% } %>
+    </section>
+
+    <div class="heading">
+      <h2>Milk products</h2>
+    </div>
+    <section class="products-container">
+      <% if (Milk_Products.length > 0) { %> <% Milk_Products.forEach(product =>
+      { %>
+      <div class="product-card">
+        <img src="<%= product.imageUrl %>" alt="<%= product.name %>" />
+        <h2><%= product.name %></h2>
+        <p><%= product.description %></p>
+        <p>Price: &#8377; <%= (product.price).toLocaleString('en-IN') %></p>
+        <button
+          class="add-to-cart-btn"
+          data-id="<%= product.id %>"
+          data-name="<%= product.name %>"
+          data-price="<%= product.price %>"
+          data-image-url="<%= product.imageUrl %>"
+          onclick="addToCart(this)"
+        >
+          Add to Cart
+        </button>
+      </div>
+      <% }); %> <% } else { %>
+      <p>No products available.</p>
+      <% } %>
+    </section>
+
+    <%- include('includes/footer') %>
+    <!-- Bootstrap and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/home.js"></script>
+  </body>
+</html>

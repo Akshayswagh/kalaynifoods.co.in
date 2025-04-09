@@ -1,0 +1,221 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.mobileSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+.mobileCart {
+  font-size: 1.5rem;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 0.5rem 1rem;
+  color: rgb(0, 0, 0);
+  padding-left: 30px !important;
+  padding-right: 20px !important;
+  position: sticky !important;
+  width: 100% !important;
+  z-index: 5 !important;
+  top: 0;
+}
+
+.navbar-logo img {
+  height: 4rem;
+}
+/* .navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+} */
+
+/* Add these styles to your existing CSS */
+.navbar-menu a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.11rem;
+  text-align: left;
+  transition: background-color 0.3s, color 0.3s;
+}
+.navbar-menu a:hover {
+  background-color: #eb4b51; /* Change to your desired hover background color */
+  color: #292825; /* Change to your desired hover text color */
+  padding-left: 1.5rem;
+  border-radius: 20px; /* Add padding for a slight indentation on hover */
+}
+
+.navbar-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 80px; /* Position the menu just below the navbar */
+  right: 7px; /* Align the menu to the right */
+  width: 50%; /* Set the width to 50% */
+  background-color: #fffefedb;
+  z-index: 3;
+  border-radius: 10px;
+}
+
+.navbar-menu a {
+  padding: 1rem;
+  text-align: left;
+}
+
+/* Style the cart icon */
+.navbar-menu a:last-child i {
+  font-size: 1.5rem; /* Increase the size of the icon */
+}
+
+/* Style for the cart count */
+#cartCount {
+  position: relative;
+  top: -15px;
+  right: 11px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.navbar-toggle {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.navbar-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(68, 67, 67);
+  margin: 4px 0;
+}
+
+.close-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 100;
+  color: rgb(68, 67, 67);
+}
+
+.hide-toggle {
+  display: none;
+}
+
+.show {
+  display: flex !important;
+}
+
+@media (min-width: 900px) {
+  .navbar-menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+  }
+
+  .navbar-toggle,
+  .close-icon {
+    display: none;
+  }
+  .mobileCart {
+    display: none;
+  }
+}
+
+@media (max-width: 825px) {
+  .serach_for_mobile {
+    display: block;
+    width: 80% !important;
+    margin-top: 11px !important;
+    margin-bottom: 22px !important;
+  }
+  .navbar-search-btn {
+    font-size: 14px !important;
+  }
+  .navbar-search-input {
+    margin: 0.3rem !important;
+  }
+  .serach_for_desktop {
+    display: none;
+  }
+  .mobileCart {
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 825px) {
+  .serach_for_mobile {
+    display: none;
+  }
+  .serach_for_desktop {
+    display: block;
+  }
+  .mobileCart {
+    display: none;
+  }
+}
+
+hr {
+  margin: 0 0 1px 0 !important;
+}
+
+/* Search  */
+
+.navbar-search-div {
+  background-color: transparent;
+  width: 60%;
+  max-width: 60rem;
+  padding: 0.2rem;
+  border-radius: 35px;
+  border: 1px solid #00000029;
+  box-shadow: 0px 25px 20px -20px rgba(0, 0, 0, 0.2);
+  margin: 0rem auto 0.5rem;
+}
+
+.navbar-search-form {
+  display: flex;
+  /* gap: 1rem; */
+}
+
+.navbar-search-btn {
+  color: #fff;
+  background-color: #fe424d;
+  border-radius: 50%;
+  font-size: 18px;
+  padding: 0.45rem 0.75rem;
+  border: none;
+  margin: 0.375rem;
+}
+
+.navbar-search-input {
+  border-radius: 50px !important;
+  border: none;
+  margin: 0.6rem;
+}
+
+@media (max-width: 500px) {
+  .navbar-logo img {
+    height: 3rem;
+  }
+  .mobileCart {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+}

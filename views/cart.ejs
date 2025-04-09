@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart - Kalyani Ice Cream Parlour</title>
+    <link rel="stylesheet" href="css/cart.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </head>
+  <body>
+    <!-- Include the navbar -->
+    <%- include('includes/navbar') %>
+    <header>
+      <br />
+      <br />
+      <h2>Cart Items</h2>
+    </header>
+    <main class="cart-container">
+      <!-- Cart items will be dynamically populated here -->
+    </main>
+
+    <!-- Modal -->
+    <div id="orderFormModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeOrderForm()">&times;</span>
+        <form id="orderForm">
+          <h2>Place Your Order</h2>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email (optional)"
+          />
+          <input
+            type="tel"
+            id="contact"
+            name="contact"
+            placeholder="Enter your contact number"
+            pattern="[0-9]{10}"
+            maxlength="10"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '');"
+            required
+          />
+          <textarea
+            id="address"
+            name="address"
+            placeholder="Enter your address"
+            required
+          ></textarea>
+          <button type="submit">Submit Order</button>
+        </form>
+      </div>
+    </div>
+    <%- include('includes/footer') %>
+    <script src="js/cart.js"></script>
+  </body>
+</html>

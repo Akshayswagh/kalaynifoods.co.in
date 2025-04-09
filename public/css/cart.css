@@ -1,0 +1,300 @@
+/* Header styling */
+header {
+  /* background-color: #3b608ea8; */
+  color: rgb(5, 5, 5);
+  padding: 1px;
+}
+
+header h2 {
+  margin-left: 4rem;
+}
+
+/* Cart container styling */
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Cart item styling */
+.cart-item {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.cart-item h2 {
+  font-size: 1.3rem;
+  margin: 0;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.cart-item p {
+  color: #555;
+  margin: 10px 0;
+}
+
+.cart-item p:last-child {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Quantity button styling */
+.quantity-btn {
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.quantity-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Remove button styling */
+.remove-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2em;
+  color: #007bff;
+  transition: color 0.3s;
+}
+
+.remove-btn:hover {
+  color: #0056b3;
+}
+
+/* Cart total and Order now button container styling */
+.cart-total-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.cart-total {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.cart-page-btns {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#orderNowBtn {
+  margin-left: 5px;
+}
+.order-now-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+.order-now-btn:hover {
+  background-color: #218838;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* Modal Background */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  backdrop-filter: blur(4px); /* Blurred background effect */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  animation: slide-down 0.3s ease-in-out;
+  text-align: center;
+}
+
+/* Modal Close Button */
+.close {
+  font-size: 24px;
+  color: #888;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.close:hover {
+  color: #333;
+}
+
+/* Form Styling */
+#orderForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#orderForm h2 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Input Fields */
+#orderForm input,
+#orderForm textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+  background-color: #f9f9f9;
+}
+
+#orderForm input:focus,
+#orderForm textarea:focus {
+  border-color: #4caf50; /* Green focus border */
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+  outline: none;
+}
+
+/* Textarea */
+#orderForm textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+/* Submit Button */
+#orderForm button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#orderForm button:hover {
+  background-color: #45a049;
+}
+
+#orderForm button:active {
+  background-color: #3e8e41;
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #orderForm h2 {
+    font-size: 1.5rem;
+  }
+
+  #orderForm button {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Weight option buttons styling */
+.weight-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.weight-btn {
+  background-color: white;
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 3px 8px;
+  margin: 0 5px;
+  width: 100px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+@media (max-width: 635px) {
+  .weight-btn {
+    margin: 0 5px 5px;
+  }
+  /* Weight option buttons styling */
+  .weight-options {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 375px) {
+  .cart-container {
+    padding: 8px;
+  }
+  .cart-item {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .cart-item h2 {
+    font-size: 1rem;
+  }
+}

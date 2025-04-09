@@ -1,0 +1,191 @@
+/* Reset some default styles */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+}
+/* Slider container styling */
+.slider {
+  width: 90%; /* Occupying only 80% of the screen width */
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+/* Custom styles for the image slider */
+.carousel-item img {
+  height: auto; /* Maintain aspect ratio */
+  width: 100%; /* Ensure images take up full width */
+  object-fit: cover;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .carousel-item img {
+    max-height: 300px; /* Adjusted height for smaller screens */
+  }
+}
+@media (max-width: 576px) {
+  .carousel-item img {
+    max-height: 200px; /* Adjusted height for very small screens */
+  }
+}
+/* Controls styling */
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+/* Indicators styling */
+.carousel-indicators {
+  bottom: 10px;
+  margin-bottom: 0 !important;
+}
+.carousel-indicators li {
+  background-color: #ffffff; /* White indicators for contrast */
+}
+.carousel-indicators .active {
+  background-color: #000000; /* Active indicator color */
+}
+
+/* featured products section */
+
+/* General styling */
+
+.flash-message {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  font-size: 1em;
+  transition: opacity 0.3s ease;
+}
+
+.heading h2 {
+  margin: 1rem 0 0 3rem;
+
+  font-family: "Roboto Slab", "Clarendon", "Rockwell", serif;
+  /* color: #ec3237; */
+  font-weight: 600;
+color: #5A5A5A;
+}
+/* Container styling */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0px 20px 15px 20px;
+}
+
+/* Product card styling */
+.product-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
+  max-width: 300px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect for product card */
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.product-card img {
+  width: 100%;
+  height: 230px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+/* Hover effect for image */
+/* .product-card:hover img {
+  transform: scale(1.1);
+} */
+
+/* Heading styling */
+.product-card h2 {
+  font-size: 1.2em;
+  margin: 0;
+  color: #333;
+  transition: color 0.3s;
+}
+
+/* Hover effect for heading */
+/* .product-card:hover h2 {
+  color: #007bff;
+} */
+
+/* Description styling */
+.product-card p {
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Price styling */
+.product-card p:last-child {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Button styling */
+.add-to-cart-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* Hover effect for button */
+.add-to-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Animation for product cards */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-card {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Header styling */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+}

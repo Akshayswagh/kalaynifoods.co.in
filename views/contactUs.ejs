@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Kalyani Ice Cream Parlour</title>
+    <link rel="stylesheet" href="css/contactUs.css" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  </head>
+  <body>
+    <!-- Include the navbar -->
+    <%- include('includes/navbar') %>
+    <section class="contact-section">
+      <div class="container">
+        <div class="row">
+          <!-- Contact Form -->
+          <div class="col-md-6">
+            <h2>Enquiry</h2>
+            <br />
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Your Email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="mobile"
+                  name="mobile"
+                  placeholder="Enter your mobile number"
+                  pattern="[0-9]{10}"
+                  maxlength="10"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  placeholder="Your Message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-danger btn-submit">
+                Submit
+              </button>
+            </form>
+          </div>
+          <!-- Contact Information -->
+          <div class="col-md-6 contact-info-section">
+            <h2>Reach Out Us</h2>
+            <br />
+
+            <div class="mb-4">
+              <i class="fa-solid fa-phone icons"></i>
+              <h5>Phone</h5>
+              <a
+                href="tel:+91 9423460955"
+                class="text-dark text-decoration-none"
+              >
+                +91 9423460955</a
+              >
+              <br />
+              <a href="tel:+919423344455" class="text-dark text-decoration-none"
+                >+91 9423344455
+              </a>
+              <br />
+
+              <i class="fa-solid fa-tty icons"></i
+              ><a href="tel:02482-261155" class="text-dark text-decoration-none"
+                >&nbsp; 02482-261-155</a
+              >
+            </div>
+            <div class="mb-4">
+              <i class="fas fa-envelope icons"></i>
+              <h5>Email</h5>
+              <a
+                href="mailto:kalyanifoods1994@gmail.com"
+                class="text-dark text-decoration-none"
+                >kalyanifoods1994@gmail.com</a
+              >
+            </div>
+            <div class="contact-info">
+              <div class="mb-4">
+                <i class="fas fa-map-marker-alt icons"></i>
+                <h5>Our Location</h5>
+                <p>
+                  Kalyani Ice-cream Parlour, Jalna-Chh.Sambhajinagar Highway,
+                  BADNAPUR, Dist. Jalna (MH) 431202
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Google Map Integration -->
+    <section class="map-section">
+      <div id="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3752.3458538284217!2d75.7204269749987!3d19.867612781506796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bda534830da43e9%3A0x9d0ea7a512b5eeea!2sKalyani%20Ice%20Cream%20Parlour!5e0!3m2!1sen!2sus!4v1737361091656!5m2!1sen!2sus"
+          width="100%"
+          height="100%"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Contact Us Page End -->
+    <%- include('includes/footer') %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ....................mail sending.................... -->
+    <script>
+      (function () {
+        emailjs.init("CTkUQhm01MIFqj5qS"); // Replace with your EmailJS User ID
+      })();
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          if (this.checkValidity()) {
+            const formData = {
+              name: document.getElementById("name").value,
+              email: document.getElementById("email").value,
+              mobile: document.getElementById("mobile").value,
+              message: document.getElementById("message").value,
+            };
+
+            emailjs.send("service_ibx1m2s", "template_lpnl818", formData).then(
+              function (response) {
+                alert(
+                  "Thank you for contacting us! We will get back to you soon."
+                );
+                document.getElementById("contactForm").reset();
+              },
+              function (error) {
+                alert("Error: " + JSON.stringify(error));
+              }
+            );
+          }
+        });
+    </script>
+  </body>
+</html>

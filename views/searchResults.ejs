@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serach Results - Kalyani Ice Cream Parlour</title>
+    <link rel="stylesheet" href="css/products.css">
+    <script src="js/products.js"></script>
+</head>
+<body>
+    <!-- Include the navbar -->
+    <%- include('includes/navbar') %>
+    <header>
+    <h2>Search Results for "<%= query %>"</h2>
+    </header>
+    <main class="products-container">
+      <% if (products.length > 0) { %>
+        <% products.forEach(product => { %>
+          <div class="product-card">
+            <img src="<%= product.imageUrl %>" alt="<%= product.name %>">
+            <h2><%= product.name %></h2>
+            <p><%= product.description %></p>
+            <p>Price: &#8377; <%= (product.price).toLocaleString('en-IN') %></p>
+            <button class="add-to-cart-btn" data-id="<%= product.id %>" data-name="<%= product.name %>" data-price="<%= product.price %>" data-image-url="<%= product.imageUrl %>" onclick="addToCart(this)">Add to Cart</button>
+          </div>
+        <% }); %>
+      <% } else { %>
+        <p>No products available.</p>
+      <% } %>
+    </main>
+    <%- include('includes/footer') %>
+</body>
+</html>

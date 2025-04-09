@@ -1,0 +1,253 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 600;
+}
+header h5 {
+  font-style: italic;
+}
+
+/* About Us Section */
+.about-us {
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.about-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #007bff;
+}
+
+.about-us p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+
+.about-us ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #555;
+  text-align: justify;
+}
+
+.about-us ul li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.about-us .btn-danger {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.about-us .btn-danger:hover {
+  background-color: #c82333;
+  border-color: #c82333;
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  background-color: #f3f4f6;
+  padding: 60px 0;
+  box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+.testimonial-section h2 {
+  color: #007bff;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.testimonial-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.testimonial-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card img:hover {
+  transform: scale(1.1);
+}
+
+.testimonial-card p {
+  font-size: 1.1rem;
+  color: #555;
+  font-style: italic;
+  text-align: justify;
+}
+
+.testimonial-card .name {
+  font-weight: 600;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .about-us h2 {
+    font-size: 2rem;
+  }
+
+  .about-us p {
+    font-size: 1rem;
+  }
+
+  .about-us ul li {
+    font-size: 0.95rem;
+  }
+
+  .testimonial-section h2 {
+    font-size: 2rem;
+  }
+
+  .testimonial-card {
+    margin: 15px 0;
+  }
+
+  .testimonial-card p {
+    font-size: 1rem;
+  }
+
+  .testimonial-card .name {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonial-section {
+    padding: 40px 0;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .testimonial-section h2 {
+    font-size: 1.8rem;
+  }
+}
+
+.about-us img {
+  border-radius: 20px;
+}
+
+@media (min-width: 1000px) {
+  .testimonial-card {
+    height: 230px;
+  }
+}
+
+/* ............................................................... */
+/* Testimonial Section Styling */
+.testimonial-section {
+  padding: 50px 0;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+.testimonial-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Swiper Container */
+.swiper {
+  width: 90%;
+  padding-bottom: 40px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Individual Testimonial Card */
+.testimonial-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 350px;
+  margin: auto;
+}
+
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.testimonial-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.testimonial-card .name {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Swiper Navigation & Pagination */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000;
+  display: none !important;
+}
+
+
+.swiper-pagination {
+  position: relative !important;
+  bottom: 0 !important;
+}
