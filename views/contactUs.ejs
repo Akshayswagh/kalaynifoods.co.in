@@ -15,11 +15,17 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
+    <!-- Add Font Awesome for icons in your head section -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   </head>
   <body>
     <!-- Include the navbar -->
     <%- include('includes/navbar') %>
+
     <section class="contact-section">
       <div class="container">
         <div class="row">
@@ -123,6 +129,62 @@
         </div>
       </div>
     </section>
+
+    <!-- Add this section before the Testimonial Section -->
+    <section class="shop-timings">
+      <div class="container">
+        <div class="timing-header-wrapper">
+          <div class="creative-heading">
+            <span class="icon-wrapper">
+              <i class="fas fa-ice-cream"></i>
+              <i class="fas fa-clock"></i>
+            </span>
+            <h2 class="section-title">
+              <span class="gradient-text">Sweet Hours</span>
+              <span class="sub-heading">When Flavors Meet Time</span>
+            </h2>
+            <div class="sprinkle-divider"></div>
+          </div>
+        </div>
+
+        <div class="timing-card">
+          <div class="timing-header">
+            <i class="fas fa-clock"></i>
+            <h3>Opening Hours</h3>
+          </div>
+          <ul class="timing-list">
+            <li class="timing-item">
+              <span class="day">Sunday</span>
+              <span class="time">10:00 AM - 11:00 PM</span>
+            </li>
+            <li class="timing-item">
+              <span class="day">Monday</span>
+              <span class="time">10:00 AM - 10:00 PM</span>
+            </li>
+            <li class="timing-item">
+              <span class="day">Tuesday</span>
+              <span class="time">10:00 AM - 10:00 PM</span>
+            </li>
+            <li class="timing-item">
+              <span class="day">Wednesday</span>
+              <span class="time">10:00 AM - 10:00 PM</span>
+            </li>
+            <li class="timing-item">
+              <span class="day">Thursday</span>
+              <span class="time">10:00 AM - 10:00 PM</span>
+            </li>
+            <li class="timing-item">
+              <span class="day">Friday</span>
+              <span class="time">10:00 AM - 10:00 PM</span>
+            </li>
+            <li class="timing-item">
+              <span class="day">Saturday</span>
+              <span class="time">10:00 AM - 11:00 PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
     <!-- Google Map Integration -->
     <section class="map-section">
       <div id="map">
@@ -173,6 +235,23 @@
             );
           }
         });
+
+      // Add current-day class to today's schedule
+      const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ];
+      const today = new Date().getDay();
+      document.querySelectorAll(".timing-item").forEach((item, index) => {
+        if (index === today) {
+          item.classList.add("current-day");
+        }
+      });
     </script>
   </body>
 </html>
