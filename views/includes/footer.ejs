@@ -17,6 +17,19 @@
     list-style: none;
     gap: 1rem;
   }
+
+  .Quick-Links li {
+    height:2rem;
+  }
+  .Quick-Links li::before {
+    content: "›";
+    position: relative;
+    left: 0;
+    color: #ffffff;
+    top: 3px;
+    /* font-weight: bold; */
+    font-size: 2rem;
+  }
 </style>
 <footer class="bg-dark text-light py-4">
   <div class="container">
@@ -24,8 +37,8 @@
       <!-- Links Section -->
       <div class="col-md-4 mb-4">
         <h5>Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="/" class="text-light text-decoration-none">Home</a></li>
+        <ul class="list-unstyled Quick-Links">
+          <li><a href="/" class="text-light text-decoration-none"> Home</a></li>
 
           <li>
             <a href="/celebrations" class="text-light text-decoration-none"
@@ -90,7 +103,10 @@
           </a>
           <br />
 
-          <a href="https://maps.app.goo.gl/9JmGRu9GzEKQS6aE9" style="text-decoration: none; color: white;">
+          <a
+            href="https://maps.app.goo.gl/9JmGRu9GzEKQS6aE9"
+            style="text-decoration: none; color: white"
+          >
             <i class="fas fa-map-marker-alt icon"></i>&nbsp;&nbsp; Kalyani
             Ice-cream Parlour, Jalna-Chh.Sambhajinagar Highway, BADNAPUR, Dist.
             Jalna (MH) 431202</a
